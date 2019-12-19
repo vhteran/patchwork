@@ -1,3 +1,37 @@
+
+<!-- README.md is generated from README.Rmd. Please edit that file -->
+
+# patchwork <a href='https://patchwork.data-imaginist.com'><img src='man/figures/logo.png' align="right" height="131.5" /></a>
+
+<!-- badges: start -->
+
+[![R build
+status](https://github.com/thomasp85/patchwork/workflows/R-CMD-check/badge.svg)](https://github.com/thomasp85/patchwork)
+[![CRAN\_Release\_Badge](http://www.r-pkg.org/badges/version-ago/patchwork)](https://CRAN.R-project.org/package=patchwork)
+[![CRAN\_Download\_Badge](http://cranlogs.r-pkg.org/badges/patchwork)](https://CRAN.R-project.org/package=patchwork)
+[![Lifecycle:
+experimental](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://www.tidyverse.org/lifecycle/#experimental)
+[![Codecov test
+coverage](https://codecov.io/gh/thomasp85/patchwork/branch/master/graph/badge.svg)](https://codecov.io/gh/thomasp85/patchwork?branch=master)
+<!-- badges: end -->
+
+# Examples
+
+## Get all the repositories where a specific user contributes on HEAD reference
+
+```sql
+SELECT refs.repository_id
+FROM refs
+NATURAL JOIN commits
+WHERE commits.commit_author_name = 'Johnny Bravo'
+  AND refs.ref_name = 'HEAD';
+```
+The goal of `patchwork` is to make it ridiculously simple to combine
+separate ggplots into the same graphic. As such it tries to solve the
+same problem as `gridExtra::grid.arrange()` and `cowplot::plot_grid` but
+using an API that incites exploration and iteration, and scales to
+arbitrily complex layouts.
+
 This post examines the features of [R Markdown](http://www.rstudio.org/docs/authoring/using_markdown) 
 using [knitr](http://yihui.name/knitr/) in Rstudio 0.96.
 This combination of tools provides an exciting improvement in usability for 
