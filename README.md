@@ -1,0 +1,1 @@
+The goal of patchwork is to make it ridiculously simple to combine separate ggplots into the same graphic. As such it tries to solve the same problem as gridExtra::grid.arrange() and cowplot::plot_grid but using an API that incites exploration and iteration, and scales to arbitrily complex layouts.
